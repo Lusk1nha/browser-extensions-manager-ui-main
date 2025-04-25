@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@import "@browser-extensions/design-system/theme.css";
+
+@layer base {
+  * {
+    font-family: "Noto Sans", sans-serif;
+  }
+
+  [data-title="true"] {
+    font-family: "Geologica", "Geologica Fallback";
+  }
+}
+
+@layer components {
+  .backgroundGradient {
+    background: var(--theme-bg-gradient);
+  }
+}
