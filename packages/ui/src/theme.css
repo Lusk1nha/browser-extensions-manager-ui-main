@@ -1,0 +1,65 @@
+@import "@browser-extensions/design-system/theme.css";
+
+@theme {
+  --color-card-base: var(--theme-card-base);
+  --color-card-border: var(--theme-card-border);
+  --color-card-text: var(--theme-card-text);
+  --shadow-card-shadow: var(--theme-card-shadow);
+
+  --color-logo-base: var(--theme-logo-base);
+  --color-logo-text: var(--theme-logo-text);
+
+  --color-button-default-bg: var(--theme-button-default-bg);
+  --color-button-default-bg-hover: var(--theme-button-default-bg-hover);
+  --color-button-default-text: var(--theme-button-default-text);
+  --color-button-default-border: var(--theme-button-default-border);
+  --color-button-default-ring: var(--theme-button-default-ring);
+
+  --color-button-active-bg: var(--theme-button-active-bg);
+  --color-button-active-bg-hover: var(--theme-button-active-bg-hover);
+  --color-button-active-text: var(--theme-button-active-text);
+  --color-button-active-ring: var(--theme-button-active-ring);
+}
+
+@layer base {
+  :root {
+    --theme-card-base: var(--color-system-neutral-0);
+    --theme-card-border: var(--color-system-neutral-200);
+    --theme-card-text: var(--color-system-neutral-900);
+
+    --theme-card-shadow: 0px 2px 3px 0px var(--color-system-neutral-200);
+
+    --theme-logo-base: var(--color-system-red-400);
+    --theme-logo-text: var(--color-system-neutral-900);
+
+    --theme-button-default-bg: var(--color-system-neutral-0);
+    --theme-button-default-bg-hover: var(--color-system-neutral-0) / 0.7;
+    --theme-button-default-text: var(--color-system-neutral-900);
+    --theme-button-default-border: var(--color-system-neutral-200);
+    --theme-button-default-ring: var(--color-system-red-400);
+
+    --theme-button-active-bg: var(--color-system-red-700);
+    --theme-button-active-bg-hover: var(--color-system-red-500);
+    --theme-button-active-text: var(--color-system-neutral-0);
+    --theme-button-active-ring: var(--color-system-red-400);
+  }
+
+  [data-theme="dark"] {
+    --theme-card-base: var(--color-system-neutral-800);
+    --theme-card-text: var(--color-system-white);
+
+    --theme-logo-base: var(--color-system-red-400);
+    --theme-logo-text: var(--color-system-white);
+
+    --theme-button-default-bg: var(--color-system-neutral-700);
+    --theme-button-default-bg-hover: var(--color-system-neutral-600);
+    --theme-button-default-text: var(--color-system-neutral-0);
+    --theme-button-default-border: var(--color-system-neutral-600);
+    --theme-button-default-ring: var(--color-system-red-400);
+
+    --theme-button-active-bg: var(--color-system-red-700);
+    --theme-button-active-bg-hover: var(--color-system-red-500);
+    --theme-button-active-text: var(--color-system-neutral-900);
+    --theme-button-active-ring: var(--color-system-red-400);
+  }
+}

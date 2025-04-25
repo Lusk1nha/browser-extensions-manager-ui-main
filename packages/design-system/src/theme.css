@@ -1,4 +1,70 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
+  --color-system-white: oklch(1 0 0);
+  --color-system-black: oklch(0 0 0);
+
+  --color-system-neutral-900: oklch(0.22 0.0835 267.08); /* #091540 */
+  --color-system-neutral-800: oklch(0.27 0.0309 270.81); /* #202535 */
+  --color-system-neutral-700: oklch(0.34 0.0384 270.01); /* #2F364B */
+  --color-system-neutral-600: oklch(0.46 0.0268 271.63); /* #535868 */
+  --color-system-neutral-300: oklch(0.83 0 0); /* #C6C6C6 */
+  --color-system-neutral-200: oklch(0.91 0.029 259.59); /* #D6E2F5 */
+  --color-system-neutral-100: oklch(0.95 0 0); /* #EEEEEE */
+  --color-system-neutral-0: oklch(0.99 0.0025 228.78); /* #FBFDFE */
+
+  --color-system-red-700: oklch(0.54 0.1993 29.07); /* #C7231A */
+  --color-system-red-500: oklch(0.61 0.1878 27.19); /* #DE4840 */
+  --color-system-red-400: oklch(0.67 0.1862 26.39); /* #F25C54 */
+
+  --color-system-dark-100: oklch(0.15 0.0403 266.38); /* #04091B */
+
+  --color-system-light-100: oklch(0.96 0.0154 257.2); /* #EBF2FC */
+  --color-system-light-0: oklch(0.98 0.0139 185.96); /* #EEFBF9 */
+
+  --spacing-0: 0rem; /* 0px */
+  --spacing-025: 0.125rem; /* 2px */
+  --spacing-050: 0.25rem; /* 4px */
+  --spacing-075: 0.375rem; /* 6px */
+  --spacing-100: 0.5rem; /* 8px */
+  --spacing-125: 0.625rem; /* 10px */
+  --spacing-150: 0.75rem; /* 12px */
+  --spacing-200: 1rem; /* 16px */
+  --spacing-250: 1.25rem; /* 20px */
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-400: 2rem; /* 32px */
+  --spacing-500: 2.5rem; /* 40px */
+  --spacing-600: 3rem; /* 48px */
+  --spacing-800: 4rem; /* 64px */
+  --spacing-1000: 5rem; /* 80px */
+
+  --radius-0: 0rem; /* 0px */
+  --radius-4: 0.25rem; /* 4px */
+  --radius-6: 0.375rem; /* 6px */
+  --radius-8: 0.5rem; /* 8px */
+  --radius-10: 0.625rem; /* 10px */
+  --radius-12: 0.75rem; /* 12px */
+  --radius-16: 1rem; /* 16px */
+  --radius-20: 1.25rem; /* 20px */
+  --radius-24: 1.5rem; /* 24px */
+
+  --breakpoint-xs: 240px; /* 20rem */
+}
+
+@layer base {
+  :root {
+    --theme-bg-gradient: linear-gradient(
+      to bottom,
+      var(--color-system-light-100),
+      var(--color-system-light-0)
+    );
+  }
+
+  [data-theme="dark"] {
+    --theme-bg-gradient: linear-gradient(
+      to bottom,
+      var(--color-system-dark-100),
+      var(--color-system-neutral-900)
+    );
+  }
 }
