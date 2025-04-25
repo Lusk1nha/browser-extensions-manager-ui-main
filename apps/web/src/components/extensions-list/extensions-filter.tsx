@@ -5,12 +5,12 @@ import { Button } from "@browser-extensions/ui/button";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-interface ExtensionItemProps extends Omit<AppElementFilter, "label"> {
+interface ExtensionFilterProps extends Omit<AppElementFilter, "label"> {
   children: React.ReactNode;
 }
 
-export function ExtensionItem(props: Readonly<ExtensionItemProps>) {
-  const { name, children, description } = props;
+export function ExtensionsFilter(props: Readonly<ExtensionFilterProps>) {
+  const { name, children } = props;
   const searchParams = useSearchParams();
 
   const currentFilter = searchParams.get("filter") ?? "all";

@@ -6,12 +6,16 @@ import { SunIcon } from "@browser-extensions/design-system/sun-icon";
 
 import { useTheme } from "next-themes";
 import { useCallback } from "react";
-import { ThemeType } from "@/providers/theme-provider";
 
 export function ThemeAction() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, systemTheme } = useTheme();
 
   const handleThemeChange = useCallback(() => {
+    if (theme === "system") {
+      setTheme(systemTheme === "dark" ? "light" : "dark");
+      return;
+    }
+
     if (theme === "dark") {
       setTheme("light");
       return;
@@ -28,23 +32,8 @@ export function ThemeAction() {
       size="md"
       onClick={handleThemeChange}
     >
-      <span>
-        <HandleButtonIcon theme={theme as ThemeType} />
-      </span>
+      <MoonIcon className="h-5 w-5 flex dark:!hidden" />
+      <SunIcon className="h-5 w-5 hidden dark:!flex" />
     </Button>
   );
-}
-
-interface HandleButtonIconProps {
-  theme?: ThemeType;
-}
-
-function HandleButtonIcon(props: Readonly<HandleButtonIconProps>) {
-  const { theme = "light" } = props;
-
-  if (theme === "light") {
-    return <MoonIcon className="h-5 w-5" />;
-  }
-
-  return <SunIcon className="h-5 w-5" />;
 }

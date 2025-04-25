@@ -1,6 +1,7 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
 import { LogoRawIcon } from "@browser-extensions/design-system/logo-raw-icon";
+import { cn } from "@browser-extensions/utils/cn";
 
 const logoVariants = cva("flex items-center gap-x-150", {
   variants: {
@@ -27,7 +28,7 @@ const Logo = forwardRef<HTMLDivElement, LogoProps>((props, ref) => {
       ref={ref}
       data-component="logo"
       data-variant={variant}
-      className={logoVariants({ variant, className })}
+      className={cn(logoVariants({ variant, className }))}
       {...rest}
     >
       <LogoRawIcon className="h-10 w-10 text-logo-base" data-icon />

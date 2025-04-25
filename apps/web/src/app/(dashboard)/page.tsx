@@ -1,5 +1,6 @@
-import { ExtensionList } from "@/components/extension-list/extension-list";
+import { ExtensionsList } from "@/components/extensions-list/extensions-list";
 import { Header } from "./_components/header";
+import { CreatedBy } from "./_components/created-by";
 
 export default function Home() {
   return (
@@ -9,8 +10,12 @@ export default function Home() {
       </header>
 
       <main className="w-full h-full">
-        <ExtensionList />
+        <ExtensionsList />
       </main>
+
+      <footer className="w-full flex items-center justify-center">
+        <CreatedBy />
+      </footer>
     </main>
   );
 }

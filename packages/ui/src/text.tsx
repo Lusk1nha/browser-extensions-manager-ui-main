@@ -2,15 +2,14 @@ import { cn } from "@browser-extensions/utils/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
 
-const titleVariants = cva("font-noto-sans font-bold -tracking-[1px]", {
+const textVariants = cva("font-noto-sans font-normal", {
   variants: {
     variant: {
-      default: "text-title-color",
+      default: "text-text-color",
     },
     size: {
-      sm: "text-lg -tracking-[0.2px]",
-      default: "text-2xl -tracking-[1px]",
-      md: "text-[34px] -tracking-[1px]",
+      default: "text-base -tracking-[0.5px]",
+      md: "text-lg",
     },
   },
   defaultVariants: {
@@ -19,22 +18,22 @@ const titleVariants = cva("font-noto-sans font-bold -tracking-[1px]", {
   },
 });
 
-export interface TitleProps
-  extends React.HTMLAttributes<HTMLHeadingElement>,
-    VariantProps<typeof titleVariants> {
+export interface TextProps
+  extends React.HTMLAttributes<HTMLParagraphElement>,
+    VariantProps<typeof textVariants> {
   className?: string;
 }
 
-const Title = forwardRef<HTMLHeadingElement, TitleProps>((props, ref) => {
+const Text = forwardRef<HTMLParagraphElement, TextProps>((props, ref) => {
   const { className, variant, size, ...rest } = props;
 
   return (
     <h2
       ref={ref}
-      data-component="title"
+      data-component="Text"
       data-variant={variant}
       className={cn(
-        titleVariants({
+        textVariants({
           variant,
           size,
           className,
@@ -45,6 +44,6 @@ const Title = forwardRef<HTMLHeadingElement, TitleProps>((props, ref) => {
   );
 });
 
-Title.displayName = "Title";
+Text.displayName = "Text";
 
-export { Title, titleVariants };
+export { Text, textVariants };

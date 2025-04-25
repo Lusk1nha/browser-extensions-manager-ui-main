@@ -19,6 +19,13 @@
   --color-button-active-bg-hover: var(--theme-button-active-bg-hover);
   --color-button-active-text: var(--theme-button-active-text);
   --color-button-active-ring: var(--theme-button-active-ring);
+
+  --color-title-color: var(--theme-title-color);
+  --color-text-color: var(--theme-text-color);
+
+  --color-switch-active-bg: var(--theme-switch-active-bg);
+  --color-switch-inactive-bg: var(--theme-switch-inactive-bg);
+  --color-switch-dot-bg: var(--theme-switch-dot-bg);
 }
 
 @layer base {
@@ -42,10 +49,18 @@
     --theme-button-active-bg-hover: var(--color-system-red-500);
     --theme-button-active-text: var(--color-system-neutral-0);
     --theme-button-active-ring: var(--color-system-red-400);
+
+    --theme-title-color: var(--color-system-neutral-900);
+    --theme-text-color: var(--color-system-neutral-600);
+
+    --theme-switch-active-bg: var(--color-system-red-700);
+    --theme-switch-inactive-bg: var(--color-system-neutral-300);
+    --theme-switch-dot-bg: var(--color-system-neutral-0);
   }
 
   [data-theme="dark"] {
     --theme-card-base: var(--color-system-neutral-800);
+    --theme-card-border: var(--color-system-neutral-600);
     --theme-card-text: var(--color-system-white);
 
     --theme-logo-base: var(--color-system-red-400);
@@ -61,5 +76,12 @@
     --theme-button-active-bg-hover: var(--color-system-red-500);
     --theme-button-active-text: var(--color-system-neutral-900);
     --theme-button-active-ring: var(--color-system-red-400);
+
+    --theme-title-color: var(--color-system-neutral-0);
+    --theme-text-color: var(--color-system-neutral-300);
+
+    --theme-switch-active-bg: var(--color-system-red-400);
+    --theme-switch-inactive-bg: var(--color-system-neutral-600);
+    --theme-switch-dot-bg: var(--color-system-neutral-0);
   }
 }

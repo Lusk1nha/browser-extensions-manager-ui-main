@@ -22,6 +22,8 @@
   --color-system-light-100: oklch(0.96 0.0154 257.2); /* #EBF2FC */
   --color-system-light-0: oklch(0.98 0.0139 185.96); /* #EEFBF9 */
 
+  --color-primary: var(--theme-primary);
+
   --spacing-0: 0rem; /* 0px */
   --spacing-025: 0.125rem; /* 2px */
   --spacing-050: 0.25rem; /* 4px */
@@ -58,6 +60,8 @@
       var(--color-system-light-100),
       var(--color-system-light-0)
     );
+
+    --theme-primary: var(--color-system-neutral-900);
   }
 
   [data-theme="dark"] {
@@ -66,5 +70,7 @@
       var(--color-system-dark-100),
       var(--color-system-neutral-900)
     );
+
+    --theme-primary: var(--color-system-red-400);
   }
 }
