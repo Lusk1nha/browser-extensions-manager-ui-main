@@ -1,0 +1,16 @@
+{
+  "name": "@browser-extensions/utils",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "packageManager": "pnpm@10.7.1",
+  "devDependencies": {
+    "@browser-extensions/eslint-config": "workspace:*",
+    "@browser-extensions/typescript-config": "workspace:*",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.2.0"
+  }
+}

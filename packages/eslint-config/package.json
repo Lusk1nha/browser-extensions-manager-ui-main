@@ -1,0 +1,24 @@
+{
+  "name": "@browser-extensions/eslint-config",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "files": [
+    "base.js",
+    "next.js",
+    "library.js",
+    "prettier-base.js",
+    "react-internal.js"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.31.0",
+    "@typescript-eslint/parser": "^8.31.0",
+    "@vercel/style-guide": "^6.0.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-config-turbo": "^2.5.1",
+    "eslint-plugin-only-warn": "^1.1.0",
+    "eslint-plugin-prettier": "^5.2.6",
+    "typescript": "^5"
+  }
+}
